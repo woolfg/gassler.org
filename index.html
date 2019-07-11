@@ -1,0 +1,131 @@
+<html>
+    <head>
+        <title>Wolfgang Gassler</title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <style>
+        html { 
+            background: url(images/bg.jpg) no-repeat left center fixed; 
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }    
+        #about {
+            
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            width: 30%;
+            padding: 0px;
+            margin: 0px;
+            max-width: 500px;
+            min-width: 300px;
+            height: 100%;
+
+            font-family: 'Open Sans', sans-serif;
+            font-size: 90%;
+            background-color: white;
+
+        }
+        #about section {
+            padding-left: 3em;
+            padding-right: 3em;
+            padding-bottom: 1em;
+            background-color: white;
+        }
+        #name {
+            padding-top: 3em;
+        }
+        label {
+            color: lightgrey;
+            font-size: 110%;
+            text-transform: uppercase;
+        } 
+        ul {
+            padding-inline-start: 0px;
+            margin-top: 0.5em;
+            margin-bottom: 2em;
+        }
+        li {
+            list-style-type: none;
+            margin-top: 0.3em;
+        }
+        a {
+            color: black;
+            text-decoration: underline;
+        }
+        #description {
+            margin-bottom: 3em;
+        }
+        h1 {
+            margin: 0px;
+        }
+        @media (max-width: 800px) {
+            #about {
+                width: 100%;
+                max-width: none;
+            }
+            html {
+                background: none;
+            }
+            #name {
+                background: url(images/bg-small.jpg) no-repeat left top fixed; 
+                background-size: 100%;
+                padding: 0px;
+                color: white;
+                height: 15%;
+                padding-top: 20%;
+                margin-bottom: 2em;
+            }
+        }
+        </style>
+        <article id="about">
+            <section id="name">
+                <h1>wolfgang gassler</h1>
+                <p id="description">loves data & working with people...</p>
+            </section>
+            <section>
+                <label for="interests">interests</label>
+                <ul id="interests">
+                    <li>#people</li>
+                    <li>#recommendersystems</li>
+                    <li>#databases</li>
+                    <li>#knowledgemanagement</li>
+                    <li>#learning</li>
+                </ul>
+            </section>
+            <section>
+                <label for="more">more about me</label>
+                <ul id="more">
+                    <li><a href="https://twitter.com/schafele">twitter</a></li>
+                    <li><a href="https://www.linkedin.com/in/wolfganggassler/">linkedin</a></li>
+                    <li><a href="https://www.medium.com/@schafele">medium</a></li>
+                </ul>
+            </section>    
+            <section>
+                <label for="workedfor">work</label>
+                <ul id="workedfor">
+                    <li><a href="http://inlupus.at">inlupus</a></li>
+                    <li><a href="https://company.trivago.com">trivago</a></li>
+                    <li><a href="https://dbis-informatik.uibk.ac.at">university innsbruck, austria</a></li>
+                </ul>
+            </section> 
+            <section>
+                <label for="research">research</label>
+                <ul id="research">
+                    <li><a href="https://dblp.uni-trier.de/pers/hd/g/Gassler:Wolfgang.html">dblp</a></li>
+                    <li><a href="https://scholar.google.com/citations?user=NjS_p2QAAAAJ">google scholar</a></li>
+                </ul>
+            </section>         
+            <section>
+                <label for="education">education</label>
+                <ul id="education">
+                    <li><a href="https://informatik.uibk.ac.at">university innsbruck, austria</a></li>
+                </ul>
+            </section> 
+        </article>
+    </body>
+</html>
