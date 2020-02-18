@@ -1,0 +1,264 @@
+/* VARIABLES ========================================================================== */
+
+// COLORS
+$teal: #63BDA2;
+$teal-darker: #359377;
+$gray-background: #F7F7F7;
+$gray-table-border: #EEEEEE;
+$gray-lightest: #D2D2D2;
+$gray-light: #ABABAB;
+$gray-medium: #898989;
+$gray-dark: #5F5F5F;
+$highlight: #FFEC5C;
+$orange: orange;
+
+// FONTS
+$sans-serif: "Open Sans","Segoe UI","Helvetica Neue",Helvetica,Roboto,FreeSans,sans-serif;
+$code: Menlo,Monaco,"Courier New",monospace;
+
+// BREAKPOINTS
+$breakpoint-tablet: 1000px;
+
+/* SASS IMPORT ========================================================================== */
+
+// THRID PARTY
+@import "vendor/normalize";
+
+/* STYLES ========================================================================== */
+
+body {
+  display: flex;
+  flex-direction: row; 
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: $sans-serif;
+  color: black;
+  margin-top: 5em;
+  line-height: 180%;
+  @media (max-width: $breakpoint-tablet) {
+    margin-top: 1em;
+    display: block;
+  }
+}
+
+/* HEADINGS ===================================== */
+
+h1, h2, h3, h4, h5, h6 {
+  color: $gray-light;
+  font-weight: normal;
+  a {
+    text-decoration: none;
+  }
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 130%;
+  font-weight: normal;
+}
+
+h2, h3 {
+  text-transform: uppercase;
+  font-size: 110%;
+  font-weight: normal;
+}
+
+/* links ===================================== */
+
+a {
+  color: $gray-medium;
+}
+
+a.more {
+  color: $orange;
+  text-decoration: none;
+}
+
+a.tag {
+  text-decoration: none;  
+}
+
+hr {
+  color: $orange;
+  border: 0;
+  border-top: 1px solid;
+}
+
+/* article ===================================== */
+
+article {
+  margin-bottom: 3em;
+  h1, h2 {
+    a {
+      text-decoration: none;
+    }
+  }
+  time {
+    color: $gray-medium;
+  }
+  pre, code {
+    background-color: $gray-background;
+    font-size: .90rem;
+  }
+  pre {
+    padding: 1em;
+    max-width: 100%;
+    overflow: scroll;
+    line-height: 15 0%;
+  }
+  code {
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+  }
+  blockquote {
+    border-left: 4px solid $gray-lightest; 
+    padding-left: 1.3em;
+    margin-left: 0;
+    margin-top: 0;
+  }
+  img {
+    max-width: 100%;
+  }
+  figure{
+    margin: 0;
+  }
+  figcaption {
+    h4 {
+      text-align: center;
+      margin-top: 0.2em;
+    }
+  }
+  table {
+    max-width: 100%;
+    border-spacing: 0;
+  
+    thead {
+      background: $gray-background;
+    }
+  
+    th,
+    td {
+      padding: 0.5em 1em;
+      border: 1px double $gray-table-border;
+    }
+  }
+  
+}
+
+.about {
+  li {
+    list-style: none;
+    font-size: 90%;
+  }
+  ul {
+    margin-top: 0;
+    padding-left: 0;
+    margin-bottom: 2em;
+  }
+  p {
+    margin-top: 0;
+  }
+  h3, h4 {
+    margin-bottom: 0;
+  }
+  a {
+    color: black;
+  }
+  img {
+    max-width: 100%;
+  }
+  figure{
+    margin: 0;
+  }
+  figcaption {
+    h4 {
+      text-align: center;
+      margin-top: 0.2em;
+    }
+  }  
+}
+
+.content-container {
+  flex-grow: 1;
+  flex-basis: auto;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+}
+
+.article-content {
+  .description {
+    p { 
+      margin-top: 0;
+    }
+  }
+}
+
+/* NAV ===================================== */
+
+.mountains {
+  height: 51px;
+  width: 181px;
+  fill: $orange;
+  margin-bottom: 1em;
+  @media (max-width: $breakpoint-tablet) {
+    display: none;
+  }
+}
+
+.site-title {
+  font-size: 150%;
+  a {
+    text-decoration: none;
+    @media (max-width: $breakpoint-tablet) {
+      color: $orange;
+    }
+  }
+  @media (max-width: $breakpoint-tablet) {
+    text-align: center;
+  }
+}
+
+nav {
+  margin: 1em;
+  ol {
+    padding: 0;
+  }
+  li {
+    list-style: none;
+    margin-bottom: 0.5em;
+    @media (max-width: $breakpoint-tablet) {
+      list-style-type: none;
+      display: inline;
+      margin-left: 0.5em;
+      margin-right: 0.5em;
+    }
+  }  
+  a {
+    text-decoration: none;
+    color: $gray-medium;
+    font-size: 120%;
+  }
+  .nav-menu {
+    @media (max-width: $breakpoint-tablet) {
+      text-align: center;
+    }
+  }
+}
+
+.social-icons {
+  @media (max-width: $breakpoint-tablet) {
+    text-align: center;
+  }
+}
+
+.paginator {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  p {
+    margin: 0;
+  }
+}

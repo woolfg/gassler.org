@@ -1,0 +1,13 @@
+<!-- Sidebar navigation -->
+<nav>
+  {{ partial "header.html" . }}
+  <div class="nav-menu">
+    <ol>
+      {{ range .Site.Menus.main }}
+        <li><a class="color-link nav-link" href="{{ .URL }}">{{ .Name }}</a></li>
+      {{ end }}
+      
+    </ol>
+  </div>
+  {{ partial "social.html" . }}
+</nav>
