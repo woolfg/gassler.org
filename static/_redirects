@@ -1,12 +1,10 @@
-# *** Warning! Your custom domain is not using HTTPS yet ***
 # These rules will change if you change your site’s custom domains or HTTPS settings
 
 # Redirect domain aliases to primary domain
-http://www.gassler.org/* https://wolfgang.gassler.org/:splat 301!
-http://gassler.org/* https://wolfgang.gassler.org/:splat 301!
-
 https://www.gassler.org/* https://wolfgang.gassler.org/:splat 301!
+https://gassler.dev/* https://wolfgang.gassler.org/:splat 301!
+https://www.gassler.dev/* https://wolfgang.gassler.org/:splat 301!
 https://gassler.org/* https://wolfgang.gassler.org/:splat 301!
 
 # Optional: Redirect default Netlify subdomain to primary domain
-http://zen-hermann-c6e416.netlify.com/* https://wolfgang.gassler.org/:splat 301!
+https://nostalgic-franklin-416c2d.netlify.com/* https://wolfgang.gassler.org/:splat 301!
