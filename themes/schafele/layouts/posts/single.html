@@ -5,7 +5,7 @@
     <div>
         <p>
         {{if .Params.images}}
-            {{ $srcset := "360|(max-width: 37.5em) 360px,720|(min-width: 75em) 720px,1920|(min-width: 112.5em) 1200px" }}
+            {{ $srcset := "360|(max-width: 360px) 360px,700|(min-width: 700px) 700px" }}
             {{ $srcset := split $srcset "," }}
             {{ $original := (index (.Resources.ByType "image") 0)  }}
             <!-- image -->

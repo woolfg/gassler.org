@@ -53,13 +53,14 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   text-transform: uppercase;
-  font-size: 130%;
+  font-size: 160%;
   font-weight: normal;
+  line-height: 150%;
 }
 
 h2, h3 {
   text-transform: uppercase;
-  font-size: 110%;
+  font-size: 130%;
   font-weight: normal;
 }
 
@@ -72,6 +73,7 @@ a {
 a.more {
   color: $orange;
   text-decoration: none;
+  padding-left: 0.3em;
 }
 
 a.tag {
@@ -92,6 +94,9 @@ article {
     a {
       text-decoration: none;
     }
+  }
+  h2 {
+    margin-top: 3em;
   }
   time {
     color: $gray-medium;
@@ -121,6 +126,7 @@ article {
   }
   figure{
     margin: 0;
+    text-align: center;
   }
   figcaption {
     h4 {
