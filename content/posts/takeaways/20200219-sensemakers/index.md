@@ -3,8 +3,8 @@ title: "My 2min take-aways: Digital Twins, cities, neighbourhoods & rail infrast
 date: "2020-02-19"
 slug: takeaways-sensemakers-20200219
 tags: [takeaways,IoT,sensors]
-images: []
-summary: ""
+images: [banner.jpg]
+summary: "High quality speakers and presentations at the sensemaker meetup about smart city projects, smart railway infrastructure and predictive maintenance, and new ways of visualizing data in wakable 3D environments."
 ---
 
 I am not familiar with the IoT community, so I was quite surprised about the high quality of speakers and presented projects at the [sensemakers meetup](https://www.meetup.com/sensemakersams/events/xgqtlrybcdbzb/) with around 100 people. To my surprise, for such a hipster domain of IoT, there weren’t a lot of young people.
