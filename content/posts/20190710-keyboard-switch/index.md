@@ -56,4 +56,4 @@ I did the switch a couple of weeks ago and also forced me to keep the layout whi
 
 The learned patterns were just too strong, so I decided to buy English keyboard layout stickers on Amazon (see on the picture). Having those, I could already saw an improvement in the first hour and after a couple of days later, I was sold: almost no mistakes, faster programming, and finally, the understanding why vim commands are that strange, at least on a German keyboard ;)
 
-An now, after some weeks, I am still satisfied and happy that I did the switch. I am faster and pair programming gets easier as most people use English keyboards. Maybe it is painful for a couple of days, but it is definitely worth it, and it is also got to know that you can still break patterns that you have repeated and practiced over 20 years.
+An now, after some weeks, I am still satisfied and happy that I did the switch. I am faster and pair programming gets easier as most people use English keyboards. Maybe it is painful for a couple of days, but it is definitely worth it, and it is also good to know that you can still break patterns that you have repeated and practiced over 20 years.

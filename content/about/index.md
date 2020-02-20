@@ -14,6 +14,7 @@ loves data & working with people...
 * #databases
 * #knowledgemanagement
 * #learning
+* #usability
 
 ### work
 * [inlupus](https://inlupus.at)

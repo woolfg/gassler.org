@@ -1,7 +1,8 @@
 {{ define "main" }}
 <article>
     <h1 class="post-title">{{ .Title }}</h1>
-    <time>{{ .Date.Format "January 2, 2006" }}</time>
+    <time class="sep-after">{{ .Date.Format "January 2, 2006" }}</time>
+    {{ partial "minread.html" . }}
     <div>
         <p>
         {{if .Params.images}}
