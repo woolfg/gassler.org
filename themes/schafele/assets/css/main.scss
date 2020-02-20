@@ -264,7 +264,7 @@ nav {
 }
 
 
-.sep-after::after {
+.sep-after::after, .post-footer .reading-time::after {
   content: " | ";
 }
 

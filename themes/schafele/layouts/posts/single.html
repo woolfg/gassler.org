@@ -2,7 +2,7 @@
 <article>
     <h1 class="post-title">{{ .Title }}</h1>
     <time class="sep-after">{{ .Date.Format "January 2, 2006" }}</time>
-    <span class="reading-time">Reading: {{ math.Round (div (countwords .Content) 220.0) }} min</span>
+    {{ partial "minread.html" . }}
     <div>
         <p>
         {{if .Params.images}}
