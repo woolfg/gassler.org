@@ -11,7 +11,8 @@
             </h2>
             <div><p>{{ .Summary }} <a href="{{ .Permalink }}" class="more">more...</a></p></div>
             <div class="post-footer"> 
-            {{if ne .Section "section"}}<time>{{ .Date.Format "January 2, 2006" }}</time>{{ end }}
+            {{if ne .Section "section"}}<time class="sep-after">{{ .Date.Format "January 2, 2006" }}</time> {{ end }}
+            <span class="reading-time sep-after">Reading: {{ math.Round (div (countwords .Content) 220.0) }} min</span>
 
             <!-- Display tags -->
             {{if .Params.tags}}

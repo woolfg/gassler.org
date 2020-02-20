@@ -259,6 +259,15 @@ nav {
   }
 }
 
+.reading-time {
+  color: $gray-medium;
+}
+
+
+.sep-after::after {
+  content: " | ";
+}
+
 .paginator {
   display: flex;
   flex-direction: row;
