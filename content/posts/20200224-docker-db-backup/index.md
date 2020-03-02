@@ -1,6 +1,6 @@
 ---
 title: "Docker image for non-blocking MySQL and MariaDB backups"
-date: "2020-02-24"
+date: "2020-03-02"
 slug: docker-image-mysql-mariadb-backups
 tags: [docker,databases,backup]
 images: [fire.jpg]
@@ -40,11 +40,11 @@ services:
 
 # Why did I create this backup sidecar image?
 
-I have several very small *LAMP* based websites which I recently migrated to a docker based setup. To create a very high separation, every single website has its own web server and database container. To have a safe setup, I needed a simple but flexible backup solution for MySQL and MariaDB which works without changing the database container.
+I have several very small *LAMP* based websites which I recently migrated to a docker based setup. To create a high separation, every single website has its own web server and database container. To have a safe setup, I needed a simple but flexible backup solution for MySQL and MariaDB which works without changing the database container.
 
 Therefore, I created this non-blocking backup sidecar container, which can backup the database container without touching the actual DB container or interfering with the running database itself.
 
-For me, it is also very important that I can use the backup solution for high traffic websites which should not be blocked by a backup process (e.g. happens when using `mysqldump`). Therefore, I decided to use [XtraBackup](https://www.percona.com/doc/percona-xtrabackup) for MySQL and the fork of it, [MariaDBbackup](https://mariadb.com/kb/en/mariabackup-overview/) for MariaDB.
+For me, it is also very important that I can use the backup solution for high traffic websites which should not be blocked by a backup process (happens e.g. when using `mysqldump`). Therefore, I decided to use [XtraBackup](https://www.percona.com/doc/percona-xtrabackup) for MySQL and the fork of it, [MariaDBbackup](https://mariadb.com/kb/en/mariabackup-overview/) for MariaDB.
 
 # It should be configurable!
 
@@ -103,3 +103,6 @@ The image is in early *Alpha* and I am already started to roll it out. So far, e
 
 - [Github-Repo](https://github.com/woolfg/mysql-backup-sidecar)
 - [Docker Image](https://hub.docker.com/repository/docker/woolfg/mysql-backup-sidecar)
+
+# Credits
+Thanks to [Tim](https://twitter.com/thevictim02) and [Matthias](https://twitter.com/matthiasendler) for their feedback.
