@@ -105,4 +105,4 @@ The image is in early *Alpha* and I am already started to roll it out. So far, e
 - [Docker Image](https://hub.docker.com/repository/docker/woolfg/mysql-backup-sidecar)
 
 # Credits
-Thanks to [Tim](https://twitter.com/thevictim02) and [Matthias](https://twitter.com/matthiasendler) for their feedback.
+Thanks to [Tim Hannemann](https://twitter.com/thevictim02) and [Matthias Endler](https://twitter.com/matthiasendler) for reviewing drafts of this article.
