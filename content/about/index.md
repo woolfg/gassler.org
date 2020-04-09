@@ -36,3 +36,4 @@ Hoehenstrasse 115
 #### credits
 * [hugo](https://github.com/gohugoio)
 * theme based on [noteworthy](https://github.com/kimcc/hugo-theme-noteworthy/)
+* Thanks to [Unsplash](https://unsplash.com/) for all the nice photos
