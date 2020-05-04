@@ -1,9 +1,8 @@
 ---
-title: "The \"painful\" switch from a German to an English keyboard layout on Linux (Fedora)"
+title: "firefighter"
 date: "2019-07-10"
 slug: ideas
 tags: []
-images: []
 summary: ""
 draft: true
 ---

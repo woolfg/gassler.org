@@ -3,7 +3,7 @@ title: "Hey guys, are you crazy?"
 date: "2017-08-01"
 slug: hey-guys-are-you-crazy
 tags: [language, gender]
-images: [wtf.jpg]
+hero: "wtf.jpg"
 summary: "What do “goto” and “hey guys” have in common?"
 ---
 

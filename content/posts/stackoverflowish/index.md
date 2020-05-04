@@ -3,7 +3,7 @@ title: "Reset Root Password in MariaDB + MySQL in Docker and Docker Swarm"
 date: "2020-04-09"
 slug: reset-password-mariadb-mysql-docker
 tags: [stackoverflowish,mysql,mariadb,databases,docker]
-images: [steve-johnson-e4Davs7-XnE-unsplash.jpg]
+hero: "steve-johnson-e4Davs7-XnE-unsplash.jpg"
 summary: "Note to myself: do not delete your docker swarm cluster when using docker secrets for your docker based databases ;) - In case you do, you have to reset the passwords in the docker databases."
 ---
 

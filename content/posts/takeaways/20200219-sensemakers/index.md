@@ -3,7 +3,7 @@ title: "My 2min take-aways: Digital Twins, cities, neighbourhoods & rail infrast
 date: "2020-02-19"
 slug: takeaways-sensemakers-20200219
 tags: [takeaways,IoT,sensors]
-images: [banner.jpg]
+hero: "banner.jpg"
 summary: "High quality speakers and presentations at the sensemaker meetup about smart city projects, smart railway infrastructure and predictive maintenance, and new ways of visualizing data in wakable 3D environments."
 ---
 

@@ -3,7 +3,7 @@ title: "Docker image for non-blocking MySQL and MariaDB backups"
 date: "2020-03-02"
 slug: docker-image-mysql-mariadb-backups
 tags: [docker,databases,backup]
-images: [fire.jpg]
+hero: "fire.jpg"
 summary: "Do you need a non-blocking docker based backup solution for your MySQL or MariaDB container? Here it is, a simple to configure docker image which creates (incremental) backups of your database and rotates them automatically."
 ---
 

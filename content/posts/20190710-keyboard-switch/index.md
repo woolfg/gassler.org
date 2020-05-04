@@ -3,7 +3,7 @@ title: "The \"painful\" switch from a German to an English keyboard layout on Li
 date: "2019-07-10"
 slug: switch-keyboard-german-to-english-linux-fedora
 tags: [linux, german, fedora, coding]
-images: [hand.jpg]
+hero: "hand.jpg"
 summary: "I have used the German keyboard for more than two decades and decided to switch to the English keyboard. See how to switch on Fedora without losing the German Umlauts and read about the \"painful\" experience."
 ---
 

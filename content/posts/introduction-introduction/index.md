@@ -3,7 +3,6 @@ title: "The \"painful\" switch from a German to an English keyboard layout on Li
 date: "2019-07-10"
 slug: switch-keyboard-german-to-english-linux-fedora
 tags: []
-images: []
 summary: ""
 draft: true
 ---
