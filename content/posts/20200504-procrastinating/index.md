@@ -43,3 +43,6 @@ I open my app (RTM) on my phone or computer and just quickly type it in. Usually
 ## The perfect system
 
 It is very important to note that this is my system, it works for me, it has been developed over years and also changes. It also depends on the work that I am doing. When I worked at trivago as an engineering manager I had a completely different approach in comparison to now, when I am working on projects on my own. I have developed my system by mainly getting to know about other systems and then picked whatever I liked. My advice would be to just try it out for a couple of weeks, keep whatever works and throw away what is not working for you. Do not stick to a routine just because it is written in the book of a famous self-organization guru or some random guy’s blog post ;)
+
+# Credits
+Thanks to [Andy Grunwald](https://twitter.com/andygrunwald) for all the friendly reminders to try out Remember the milk ;)
