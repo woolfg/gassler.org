@@ -1,15 +1,18 @@
-{{ if .Params.images }}
+{{ if isset .Params "hero" }}
 
+{{ $original := (.Page.Resources.ByType "image").GetMatch (printf "*%s" (.Params.hero))  }}
+{{ if $original }}
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:creator" content="@schafele">
 <meta name="twitter:title" content="{{ .Params.title }}">
 <meta name="twitter:description" content="{{ .Summary }}">
-<meta name="twitter:image" content="{{ (index (.Resources.ByType "image") 0).Permalink }}">
+<meta name="twitter:image" content="{{ $original.Permalink }}">
 
 <meta property="og:url" content="{{ .Permalink }}" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="{{ .Params.title }}" />
 <meta property="og:description" content="{{ .Summary }}" />
-<meta property="og:image" content="{{ (index (.Resources.ByType "image") 0).Permalink }}" />
+<meta property="og:image" content="{{ $original.Permalink }}" />
+{{ end }}
 
 {{ end }}
