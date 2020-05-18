@@ -12,7 +12,7 @@
             {{ if $original }}
             <!-- image -->
             <figure class="hero">
-                <img src="{{ $original.RelPermalink }}" srcset="{{range $i, $set := $srcset}}{{ $setparams := split $set "|" }}{{$sizecondition := index $setparams 0 }}{{ $image := $original.Resize (print $sizecondition "x") }}{{ if $i }}, {{ end }}{{ (print $image.RelPermalink " " $sizecondition "w") }}{{ end }}" sizes="{{range $i, $set := $srcset}}{{ $setparams := split $set "|" }}{{$mediacondition := index $setparams 1 }}{{ if $i }}, {{ end }}{{ $mediacondition }}{{ end }}"/>
+                <img src="{{ if ge $original.Width 1500 }}{{ ($original.Resize "1500x").RelPermalink  }}{{ else }}{{ $original.RelPermalink }}{{ end }}" srcset="{{range $i, $set := $srcset}}{{ $setparams := split $set "|" }}{{$sizecondition := index $setparams 0 }}{{ $image := $original.Resize (print $sizecondition "x") }}{{ if $i }}, {{ end }}{{ (print $image.RelPermalink " " $sizecondition "w") }}{{ end }}" sizes="{{range $i, $set := $srcset}}{{ $setparams := split $set "|" }}{{$mediacondition := index $setparams 1 }}{{ if $i }}, {{ end }}{{ $mediacondition }}{{ end }}"/>
             </figure>
             {{ end }}
         {{ end }}
