@@ -49,4 +49,5 @@ Thanks to [Andy Grunwald](https://twitter.com/andygrunwald) for all the friendly
 
 # Comments
 
-- on [Hacker News](https://news.ycombinator.com/item?id=23227331)
+- Comments on [Hacker News](https://news.ycombinator.com/item?id=23227331)
+- Feedback (anonymous) via [Constructeev](https://www.constructeev.com/gassler-blog)
