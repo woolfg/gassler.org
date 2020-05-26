@@ -1,0 +1,8 @@
+{{if .Params.tags}}
+  {{ range .Params.tags }}
+      {{ $tagmeta :=  ((printf "/tags/%s" .) | $.Site.GetPage).Params }}
+      {{if $tagmeta.supershort }}
+      <span class="tags-short">| #{{.}}: {{  $tagmeta.supershort }}</span>
+      {{ end }}
+  {{ end }}
+{{ end }}
