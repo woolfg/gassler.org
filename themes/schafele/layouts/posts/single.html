@@ -20,6 +20,9 @@
         {{ .Content }}
         </p>
     </div>
+    {{ if .Params.credits }}
+    <p class="credits">Credits: {{ range .Params.credits }}{{ . }}{{ end }}</p> 
+    {{ end }}
     <div class="page-footer">
         <hr class="footer-divider">
         {{if .Params.tags}}
