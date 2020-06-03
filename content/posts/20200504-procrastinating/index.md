@@ -2,7 +2,7 @@
 title: "How I trick my well developed procrastination skills"
 date: "2020-05-04"
 slug: trick-my-procrastination-skills
-tags: [organization]
+tags: [productivity]
 hero: "pedro-da-silva-unEmGQqdO7Q-unsplash.jpg"
 summary: "It took me 10 years to finish my PhD, so I would assume my procrastination skills are not that bad ;) ... fortunately, nowadays, I use some basic rules to fight procrastination and have become quite efficient with it. The following three basic rules helped me a lot to organize myself."
 ---

@@ -259,7 +259,7 @@ nav {
   }
 }
 
-.reading-time {
+.reading-time, .tags-short{
   color: $gray-medium;
 }
 
@@ -276,4 +276,8 @@ nav {
   p {
     margin: 0;
   }
+}
+
+.credits {
+  color: $gray-medium
 }

@@ -3,6 +3,7 @@
     <h1 class="post-title">{{ .Title }}</h1>
     <time class="sep-after">{{ .Date.Format "January 2, 2006" }}</time>
     {{ partial "minread.html" . }}
+    {{ partial "shorttagdescription.html" . }}
     <div>
         <p>
         {{ if .Params.hero }}
@@ -19,6 +20,9 @@
         {{ .Content }}
         </p>
     </div>
+    {{ if .Params.credits }}
+    <p class="credits">Credits: {{ range .Params.credits }}{{ . }}{{ end }}</p> 
+    {{ end }}
     <div class="page-footer">
         <hr class="footer-divider">
         {{if .Params.tags}}

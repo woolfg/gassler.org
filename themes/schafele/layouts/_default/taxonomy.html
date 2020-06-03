@@ -1,7 +1,9 @@
 {{ define "main" }}
 <!-- Page that displays after clicking on a post's tag -->
   <h1>Tagged "{{ .Data.Term }}"</h1>
-  {{range .Pages}}
+  <p>{{ .Params.description }}</p>
+
+  {{range .Pages}} 
   
     <!-- Display the posts with the tag -->
     <article>

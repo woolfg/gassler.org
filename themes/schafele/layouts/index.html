@@ -17,7 +17,8 @@
             <!-- Display tags -->
             {{if .Params.tags}}
                 {{ range .Params.tags }}
-                    <a class="tag" href="/tags/{{ . | urlize }}">#{{.}}</a>
+                    {{ $tagmeta :=  ((printf "/tags/%s" .) | $.Site.GetPage).Params }}
+                    <a class="tag" href="/tags/{{ . | urlize }}"{{if $tagmeta.supershort }} title="{{  $tagmeta.supershort }}"{{ end }}>#{{.}}</a>
                 {{ end }}
             {{ end }}
             <hr class="footer-divider">
