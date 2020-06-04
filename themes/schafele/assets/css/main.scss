@@ -281,3 +281,19 @@ nav {
 .credits {
   color: $gray-medium
 }
+
+.whatibuilt {
+  @media (max-width: $breakpoint-tablet) {
+    display: none;
+  }  
+  width: 170px;
+  border: $orange 1px solid;
+  margin-top: 3em;
+  padding: 0 1em;
+  color: $gray-light;
+  font-size: 90%;
+  a {
+    font-size: 100%;
+    text-decoration: underline;
+  }
+}
