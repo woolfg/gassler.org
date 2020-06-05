@@ -28,10 +28,11 @@ loves data & working with people...
 ### education
 * [university of innsbruck, austria](https://informatik.uibk.ac.at)
 
-### imprint
+### imprint / editorial responsibility
 Wolfgang Gassler  
 Hoehenstrasse 115  
 6020 Innsbruck, Austria  
+info@gassler.org
 
 #### credits
 * [hugo](https://github.com/gohugoio)
