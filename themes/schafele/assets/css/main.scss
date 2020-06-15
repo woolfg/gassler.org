@@ -91,12 +91,13 @@ hr {
 article {
   margin-bottom: 3em;
   h1, h2 {
+    margin-top: 0;
+    @media (max-width: $breakpoint-tablet) {
+      margin-top: 2em;
+    }    
     a {
       text-decoration: none;
     }
-  }
-  h2 {
-    margin-top: 3em;
   }
   time {
     color: $gray-medium;
@@ -253,9 +254,12 @@ nav {
   }
 }
 
-.social-icons {
+.woolf-icons {
   @media (max-width: $breakpoint-tablet) {
     text-align: center;
+  }
+  .woolf-icon {
+    margin-right: 0.20em;
   }
 }
 
