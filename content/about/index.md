@@ -30,8 +30,6 @@ loves data & working with people...
 
 ### imprint / editorial responsibility
 Wolfgang Gassler  
-Hoehenstrasse 115  
-6020 Innsbruck, Austria  
 info@gassler.org
 
 #### credits

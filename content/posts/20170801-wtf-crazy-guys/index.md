@@ -2,7 +2,7 @@
 title: "Hey guys, are you crazy?"
 date: "2017-08-01"
 slug: hey-guys-are-you-crazy
-tags: [language, gender]
+tags: [language, gender, culture]
 hero: "wtf.jpg"
 summary: "What do “goto” and “hey guys” have in common?"
 ---
@@ -17,10 +17,10 @@ Why you are no longer allowed to say “hey guys”, everybody uses it, even nat
 Source: https://www.theguardian.com/media/mind-your-language/2016/jun/10/you-dont-like-being-called-guys-come-on-people
 
 
-I gave it some thought, watched Limmy’s video, and read the [guardian article](https://www.theguardian.com/media/mind-your-language/2016/jun/10/you-dont-like-being-called-guys-come-on-people). I concluded that "hey guys" is definitely neither gender-neutral nor inclusive, thus, I decided to just remove it from my vocabulary. You can also try it, it won’t hurt ;) besides the fact that you will recognize how many people use the term all the time.
+I gave it some thought, watched Limmy’s video, and read guardian articles [[1]](https://www.theguardian.com/media/mind-your-language/2016/jun/10/you-dont-like-being-called-guys-come-on-people),[[2]](https://www.theguardian.com/world/shortcuts/2018/aug/01/hi-guys-whats-wrong-with-this-greeting). I concluded that "hey guys" is definitely neither gender-neutral nor inclusive, thus, I decided to just remove it from my vocabulary. You can also try it, it won’t hurt ;) besides the fact that you will recognize how many people use the term all the time.
 
 
-Language is constantly changing and I have learned to avoid terms and sayings that might be offensive or put a wrong emphasis one something. Maybe you don’t agree but imho it is worth to give it some thought...and for all the developers out there, do you still use goto?
+Language constantly changes and I have learned to avoid terms and sayings that might be offensive or put a wrong emphasis one something. Maybe you don’t agree but imho it is worth to give it some thought...and for all the developers out there, do you still use goto?
 
 
 {{< figure src="xkcd.png" title="https://xkcd.com/292/" >}}
