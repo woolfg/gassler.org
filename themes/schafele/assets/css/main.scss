@@ -99,6 +99,11 @@ article {
       text-decoration: none;
     }
   }
+  h2 {
+    margin-top: 3rem;
+    font-size: 160%;
+    text-transform: capitalize;
+  }
   time {
     color: $gray-medium;
   }

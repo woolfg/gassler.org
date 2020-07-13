@@ -47,7 +47,7 @@ It is very important to note that this is my system, it works for me, it has bee
 ## Credits
 Thanks to [Andy Grunwald](https://twitter.com/andygrunwald) for all the friendly reminders to try out Remember the milk ;)
 
-# Comments
+## Comments
 
 - Comments on [Hacker News](https://news.ycombinator.com/item?id=23227331)
 - Feedback (anonymous) via [Constructeev](https://www.constructeev.com/gassler-blog)
