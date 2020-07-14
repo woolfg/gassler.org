@@ -5,6 +5,7 @@ slug: firefighter-experience-impact-on-leadership-style
 tags: [leadership, firefighting]
 hero: "christmastree.jpg"
 summary: "My top 5 lessons learned from 20 years in a volunteer fire department, and how it helped me to shape the culture and motivate teams in my job as an engineering manager."
+longsummary: "I spent more than 20 years in a volunteer fire department which heavily influenced my leadership style as an engineering manager. I present my top-five lessons learned from my time in leadership roles in the fire department, and how it helped me to shape the culture and motivate teams in my world of an engineering manager."
 ---
 
 *--- This article is not only for managers! [read why...](#not-only-for-managers)*
