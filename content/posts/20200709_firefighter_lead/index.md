@@ -83,7 +83,7 @@ I was twelve when I joined the fire department and I am still a member of the te
 
 {{< figure src="trucks_seegrube.jpg" >}}
 
-## Disclaimer
+## Not only for managers!
 This article is not only for managers! It is very important for me to mention that everybody can contribute in those fields, even without a lead/manager role. In all mentioned situations I was not on my own and a lot of ideas and changes were driven by “non-managers”. So please, propose ideas and drive projects, even if you do not wear the official “manager” or “lead” hat. I can also  strongly recommend reading the article by Tom Bartel about [Leadership as an Individual Contributor](https://www.tombartel.me/blog/exhibit-leadership-as-individual-contributor/).
 
 ## Book recommendation
