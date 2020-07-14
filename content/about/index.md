@@ -32,6 +32,8 @@ loves data & working with people...
 Wolfgang Gassler  
 info@gassler.org
 
+{{< subscribe >}}
+
 #### credits
 * [hugo](https://github.com/gohugoio)
 * theme based on [noteworthy](https://github.com/kimcc/hugo-theme-noteworthy/)
