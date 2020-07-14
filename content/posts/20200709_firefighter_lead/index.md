@@ -112,6 +112,11 @@ Later when I was working for trivago, I read the book [Turn The Ship Around! by 
 
 The book covers a lot of aspects of how to lead while empowering people to take responsibility for themselves and to grow in their roles. I can strongly recommend this book to any lead and especially engineering managers. At the end the difference between navy specialists and IT specialists might be smaller than expected ;)
 
+## Comments & Discussion
+
+- Comments on [Hacker News](https://news.ycombinator.com/item?id=23835909)
+- Feedback (anonymous) via [Constructeev](https://www.constructeev.com/gassler-blog)
+
 ## Credits
 
 - Thanks a lot to Christof Schlenz, my friend, youth instructor, and later fire chief of our fire department who showed me how to lead without "*authority by hierarchy*".
