@@ -20,15 +20,20 @@
         {{ .Content }}
         </p>
     </div>
-    {{ if .Params.credits }}
-    <p class="credits">Credits: {{ range .Params.credits }}{{ . }}{{ end }}</p> 
+    {{ if or (not .Params.tags) (not (in .Params.tags "stackoverflowish")) }}
+    {{ partial "subscribe.html" . }}
     {{ end }}
     <div class="page-footer">
-        <hr class="footer-divider">
-        {{if .Params.tags}}
-        {{ range .Params.tags }}
-            <a class="tag" href="/tags/{{ . | urlize }}">#{{.}}</a>
+        <!-- <hr class="footer-divider"> -->
+        {{ if .Params.credits }}
+        <p class="credits">Credits: {{ range .Params.credits }}{{ .  | markdownify }}{{ end }}</p> 
         {{ end }}
+        {{if .Params.tags}}
+        <div class="footertags">Tags: 
+        {{ range .Params.tags }}
+            <a class="tag" href="/tags/{{ . | urlize }}">#{{ . }}</a>
+        {{ end }}
+        </div>
       {{ end }}
     </div>
 </article>

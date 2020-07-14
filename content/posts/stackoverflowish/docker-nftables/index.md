@@ -5,7 +5,7 @@ slug: overwrite-iptables-rules-docker-swarm
 tags: [stackoverflowish,docker]
 hero: "julian-berengar-solter-URtfHnJza0E-unsplash.jpg"
 summary: "Simple if you know how to do it: Preventing Docker (Swarm) from opening ports to the outer world on Debian by overwriting the Docker network magic using iptables and nftables."
-credits: ["Hero picture by https://unsplash.com/@moinundmeer"]
+credits: ["Hero picture by [@moinundmeer](https://unsplash.com/@moinundmeer)"]
 ---
 
 Have you ever tried to overwrite Docker’s iptables network magic, e.g. preventing Docker Swarm from opening arbitrary ports on the ingress overlay network which would allow containers directly to publish ports to the other world? Apparently it is not that easy and I also couldn’t find a lot of material about it online, therefore, I will quickly summarize my findings here in this “stackoverflowish” blog post.
