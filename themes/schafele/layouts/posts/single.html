@@ -1,6 +1,6 @@
 {{ define "main" }}
-<article>
-    <h1 class="post-title">{{ .Title }}</h1>
+<article class="post">
+    <h1 class="post-title" id="title">{{ .Title }}</h1>
     <time class="sep-after">{{ .Date.Format "January 2, 2006" }}</time>
     {{ partial "minread.html" . }}
     {{ partial "shorttagdescription.html" . }}

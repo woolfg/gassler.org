@@ -52,16 +52,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-size: 160%;
   font-weight: normal;
   line-height: 150%;
+  letter-spacing: 0.05rem;
 }
 
 h2, h3 {
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-size: 130%;
   font-weight: normal;
+}
+h2 {
+  letter-spacing: 0.1rem;
+  line-height: 1.5;
 }
 
 /* links ===================================== */
@@ -98,11 +103,6 @@ article {
     a {
       text-decoration: none;
     }
-  }
-  h2 {
-    margin-top: 3rem;
-    font-size: 160%;
-    text-transform: capitalize;
   }
   time {
     color: $gray-medium;
@@ -275,6 +275,13 @@ nav {
 
 .sep-after::after, .post-footer .reading-time::after {
   content: " | ";
+}
+
+article.post {
+  h2 {
+    margin-top: 3rem;
+    font-size: 160%;
+  }
 }
 
 .paginator {
