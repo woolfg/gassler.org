@@ -291,6 +291,31 @@ nav {
   color: $gray-medium
 }
 
+.subscribe {
+  border: $orange 1px solid;
+  padding: 1rem;
+  p {
+    margin: 0;
+  }
+  form {
+    margin-top: 1rem;
+  }
+  .button {
+    line-height: initial;
+    margin-left: 0.5rem;
+  }
+}
+
+.page-footer {
+  .footertags {
+    margin-top: 1rem;
+    color: $gray-medium;
+  }
+  .tag {
+    text-decoration: underline;
+  }
+}
+
 .whatibuilt {
   @media (max-width: $breakpoint-tablet) {
     display: none;
