@@ -27,10 +27,14 @@ I figured that the dynamics of engineers and volunteer firefighter teams are ver
 
 ## Lesson 1: Provide structure and keep going
 
-Especially when the motivation in the team is already down, for a lead, it is super hard to keep going. But this is exactly the most important phase and it is crucial to have a lead who does not give up. For a team in this downwards spiral, the most important thing is structure. 
+Especially when the motivation in the team is already down, for a lead, it is super hard to keep going. But this is exactly the most important phase and it is crucial to have a lead who does not give up. For a team in this downwards spiral, the most important thing is structure.
+
 In the fire department, when the team got smaller and smaller due to a lack of motivation, we made a big mistake: We canceled some of the weekly drills as the group of present people was too small to practise bigger operations—or at least that was the excuse. As a result, even more people got bored and dropped out.
-I saw similar situations in engineering teams when the motivation was down. People got more and more passive and they no longer proposed to catch up, to have brainstorming sessions, or to talk with each other to find the best solution for a problem. 
+
+I saw similar situations in engineering teams when the motivation was down. People got more and more passive and they no longer proposed to catch up, to have brainstorming sessions, or to talk with each other to find the best solution for a problem.
+
 In this situation it is essential to insist on the routine that you have hopefully already established before you experience difficult times. Do not accept cancellation requests for 1:1 sessions, retrospectives, or other regular meetings. In this dangerous situation, as a lead, you are the tower of strength and you can help the team to overcome the situation. It sounds quite easy but in reality it is not. In such situations I was depressed and unmotivated as well.
+
 Everybody works differently but I think a piece of general advice is to stabilize yourself first. Do something outside of your job that makes you happy. Approach your allies (in private or business) and discuss the situation to be able to digest it faster. After that, support the team and keep the routine going. For the weekly firefighter drills I prepared backup plans in case too few people showed up. It is always good to have backup plans to be prepared and keep the system going. For 1:1s,  you can try to bring some variety to it by e.g. [asking different and new questions](https://jasonevanish.com/2014/05/29/101-questions-to-ask-in-1-on-1s/).
 
 
@@ -79,7 +83,9 @@ All previously mentioned points influence it, the most important key performance
 
 {{< figure src="viewibk.jpg" >}}
 
-When our fire department suffered from a high dropout rate, we distributed most responsibilities to active people, gave them new challenges and tried to keep going with the remaining people. Combined with the all-time awesome team atmosphere, we grew after a short period of time just due to the word of mouth. People heard that it is fun to join the fire department, you can learn a lot of new and meaningful things, and it is a great open-minded group. I experienced the same situation in a company again when we opened some positions in a well-functioning team. Several people in the same company directly approached me and applied for the position internally as they heard a lot of good things about our team. So in case you have recruiting problems, make your team happy and let them grow. This might be a very time consuming and a big investment in your team, but eventually, it will pay off.
+When our fire department suffered from a high dropout rate, we distributed most responsibilities to active people, gave them new challenges and tried to keep going with the remaining people. Combined with the all-time awesome team atmosphere, we grew after a short period of time just due to the word of mouth. People heard that it is fun to join the fire department, you can learn a lot of new and meaningful things, and it is a great open-minded group.
+
+I experienced the same situation in a company again when we opened some positions in a well-functioning team. Several people in the same company directly approached me and applied for the position internally as they heard a lot of good things about our team. So in case you have recruiting problems, make your team happy and let them grow. This might be a very time consuming and a big investment in your team, but eventually, it will pay off.
 
 ## Conclusion
 
