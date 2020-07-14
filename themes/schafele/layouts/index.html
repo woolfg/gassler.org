@@ -9,7 +9,7 @@
                     {{ .Title }}
                 </a>
             </h2>
-            <div><p>{{ .Summary }} <a href="{{ .Permalink }}" class="more">more...</a></p></div>
+            <div><p>{{if .Params.longsummary }}{{ .Params.longsummary }}{{ else }}{{ .Summary }}{{ end }}<a href="{{ .Permalink }}" class="more">more...</a></p></div>
             <div class="post-footer"> 
             {{if ne .Section "section"}}<time class="sep-after">{{ .Date.Format "January 2, 2006" }}</time> {{ end }}
             {{ partial "minread.html" . }}

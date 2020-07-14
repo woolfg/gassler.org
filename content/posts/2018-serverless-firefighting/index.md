@@ -2,7 +2,7 @@
 title: "Serverless Firefighting: Deliver Emails to Slack using Mailgun & Google Cloud Functions"
 date: "2018-03-31"
 slug: serverless-firefighting-deliver-emails-to-slack-using-mailgun-google-cloud-functions
-tags: [cloud, serverless, gcp, slack, mailgun]
+tags: [cloud, serverless, gcp, slack, mailgun, firefighting]
 hero: "banner.jpg"
 summary: "The idea was quite simple: I wanted to forward alarm emails to a Slack channel of our voluntary firefighter department, using Mailgun, Google Cloud Functions, and the Slack API...quite simple, right? ;)"
 ---

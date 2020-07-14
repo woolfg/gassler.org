@@ -52,16 +52,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-size: 160%;
   font-weight: normal;
   line-height: 150%;
+  letter-spacing: 0.05rem;
 }
 
 h2, h3 {
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-size: 130%;
   font-weight: normal;
+}
+h2 {
+  letter-spacing: 0.1rem;
+  line-height: 1.5;
 }
 
 /* links ===================================== */
@@ -272,6 +277,13 @@ nav {
   content: " | ";
 }
 
+article.post {
+  h2 {
+    margin-top: 3rem;
+    font-size: 160%;
+  }
+}
+
 .paginator {
   display: flex;
   flex-direction: row;
@@ -289,6 +301,7 @@ nav {
 .subscribe {
   border: $orange 1px solid;
   padding: 1rem;
+  margin-top: 3rem;
   p {
     margin: 0;
   }
