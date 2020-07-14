@@ -114,7 +114,7 @@ The book covers a lot of aspects of how to lead while empowering people to take 
 
 ## Comments & Discussion
 
-- Comments on [Hacker News](https://news.ycombinator.com/item?id=23835909)
+- Comments/Upvote on [Hacker News](https://news.ycombinator.com/item?id=23835909)
 - Feedback (anonymous) via [Constructeev](https://www.constructeev.com/gassler-blog)
 
 ## Credits
