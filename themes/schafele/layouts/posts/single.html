@@ -24,7 +24,9 @@
     {{ partial "subscribe.html" . }}
     {{ end }}
     <div class="page-footer">
-        <!-- <hr class="footer-divider"> -->
+        {{ if and .Params.tags (in .Params.tags "stackoverflowish") }}
+        <hr class="footer-divider">
+        {{ end }}
         {{ if .Params.credits }}
         <p class="credits">Credits: {{ range .Params.credits }}{{ .  | markdownify }}{{ end }}</p> 
         {{ end }}
