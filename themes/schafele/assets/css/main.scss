@@ -312,6 +312,13 @@ article.post {
     line-height: initial;
     margin-left: 0.5rem;
   }
+  input[type=email] {
+    @media (max-width: $breakpoint-tablet) {
+      padding-left: 0;
+      padding-right: 0;
+      width: 40%;
+    }  
+}
 }
 
 .page-footer {
