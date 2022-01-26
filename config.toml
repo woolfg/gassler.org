@@ -32,10 +32,16 @@ summaryLength = 10 # Configure how long the post summary should be on the homepa
 	url = "/about/"
 	weight = 4 # Weight is an integer used to sort the menu items. The sorting goes from smallest to largest numbers. If weight is not defined for each menu entry, Hugo will sort the entries alphabetically.
 
+#[[menu.main]]
+#	identifier = "books"
+#	name = "good reads"
+#	url = "/books/"
+#	weight = 3
+
 [[menu.main]]
-	identifier = "books"
-	name = "good reads"
-	url = "/books/"
+	identifier = "consulting"
+	name = "consulting"
+	url = "/consulting/"
 	weight = 3
 
 [[menu.main]]

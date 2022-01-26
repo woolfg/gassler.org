@@ -159,12 +159,11 @@ article {
 
 .about {
   li {
-    list-style: none;
-    font-size: 90%;
+    list-style: disc;
   }
   ul {
     margin-top: 0;
-    padding-left: 0;
+    
     margin-bottom: 2em;
   }
   p {
@@ -188,6 +187,27 @@ article {
       margin-top: 0.2em;
     }
   }  
+
+  .woolf-icons {
+    margin: 2em;
+    @media (max-width: $breakpoint-tablet) {
+      text-align: left;
+      margin: 1em;
+    }
+    .woolf-icon {
+      margin-right: .7rem;
+      svg {
+        height: 4em;
+        @media (max-width: $breakpoint-tablet) {
+          height: 2em;
+        }
+      }
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+
 }
 
 .content-container {
@@ -206,6 +226,8 @@ article {
     }
   }
 }
+
+
 
 /* NAV ===================================== */
 
@@ -265,6 +287,9 @@ nav {
   }
   .woolf-icon {
     margin-right: .7rem;
+    svg {
+      height: 28px;
+    }
   }
 }
 
