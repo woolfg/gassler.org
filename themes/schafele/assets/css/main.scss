@@ -159,12 +159,11 @@ article {
 
 .about {
   li {
-    list-style: none;
-    font-size: 90%;
+    list-style: disc;
   }
   ul {
     margin-top: 0;
-    padding-left: 0;
+    
     margin-bottom: 2em;
   }
   p {
@@ -206,6 +205,8 @@ article {
     }
   }
 }
+
+
 
 /* NAV ===================================== */
 
