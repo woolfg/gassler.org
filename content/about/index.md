@@ -6,7 +6,6 @@ layout: "about"
 
 {{< figure src="wolfgang.jpg" >}}
 
-## "People & data lead to a bright future"
 
 {{< social >}}
 
