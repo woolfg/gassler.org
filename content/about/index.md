@@ -1,6 +1,6 @@
 ---
 type: section
-title: "wolfgang gassler"
+title: "about wolfgang gassler"
 layout: "about"
 ---
 
@@ -8,31 +8,34 @@ layout: "about"
 
 ## "People & data lead to a bright future"
 
-### interests
-* #people
-* #recommendersystems
-* #databases
-* #knowledgemanagement
-* #learning
-* #usability
+{{< social >}}
 
-### work
-* [inlupus](https://inlupus.at)
-* [trivago](https://company.trivago.com)
-* [research group databases and information systems, university of innsbruck, austria](https://dbis-informatik.uibk.ac.at)
+### My Interests
+* People
+* Tech Culture in Teams and Companies
+* Recommender Systems
+* Databases & Scalability
+* Knowledge Management & Learning
+* Product Development & Usability
+
+### Work
+* [Freelancing & Consulting](/consulting) since the late 90s at [inlupus, Austria & Remote](https://inlupus.at)
+* Engineering Manager at [trivago, Germany](https://company.trivago.com)
+* Lecturer & Researcher at [research group databases and information systems, University of Innsbruck, Austria](https://dbis-informatik.uibk.ac.at)
+
+
 
 ### my life in academia
 * [dblp](https://dblp.uni-trier.de/pers/hd/g/Gassler:Wolfgang.html)
 * [google scholar](https://scholar.google.com/citations?user=NjS_p2QAAAAJ)
 
 ### my education
-* [university of innsbruck, austria](https://informatik.uibk.ac.at)
-
-### imprint / editorial responsibility
-Wolfgang Gassler  
-info@gassler.org
+* Ph.D. in Computer Science/Recommender Systems at [University of Innsbruck, Austria](https://informatik.uibk.ac.at)
 
 {{< subscribe >}}
+### Imprint / Editorial Responsibility
+Wolfgang Gassler  
+info@gassler.org
 
 #### credits
 * [hugo](https://github.com/gohugoio)
