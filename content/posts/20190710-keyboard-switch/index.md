@@ -7,17 +7,19 @@ hero: "hand.jpg"
 summary: "I have used the German keyboard for more than two decades and decided to switch to the English keyboard. See how to switch on Fedora without losing the German Umlauts and read about the \"painful\" experience."
 ---
 
+**Updated 2022-03-06** *(thanks to [Andy](https://twitter.com/andygrunwald) for the hint)*
+
 Typing on a keyboard as a developer --- the interface between the computer and the human brain. Most probably you also have optimized this "interface" for decades and usually other people have problems to follow you if you make use of your optimized workflow of typing and pressing shortcut combos on your keyboard.
 
 So why the hell should you change your keyboard from a German layout to an English one? The German keyboard layout is quite bad for developers, think about the moves of your fingers to type `{` or `\` on your German keyboard. Especially keyboard-oriented environments like vim were invented using the English layout. Of course, there are even more optimized developer layouts such as http://www.kaufmann.no/roland/dvorak/ but let's stick to the basics.
 
 I heard a lot about other developers who love the English layout so I always wanted to switch to it. Unfortunately, every time I said "now I switch", there was an emergency or a project under time pressure and I switched back due to time constraints to finish the work as quickly as possible. Motivated by an awesome blog post by my colleague [Matthias Endler](https://twitter.com/matthiasendler) https://matthias-endler.de/2018/keyboard/ who loves to optimize things and the opportunity of having less pressure during my sabbatical, I did the switch.
 
-# How to switch from a German to the US keyboard layout using Fedora (2022 updated)
+# How to switch from a German to the US keyboard layout using Fedora
 
 I use Fedora and i3 on a Lenovo notebook, so I had to find a good solution for using the US layout while having quick access to all German "Umlauts". It wasn't that easy to find a good solution but based on https://blog.florianheinle.de/englische-tastatur-umlaute I came up with the following solution that works for me.
 
-*(Update 2022 thanks to [Andy](twitter.com/andygrunwald) for the hint)* Usually, the file `/usr/share/X11/xkb/symbols/us` should already contain the section `xkb_symbols "de_se_fi"` which adds the "Umlauts". If it is not there, you can add it manually at the end of the file but be aware, it can get overwritten by `dnf` updates.
+*(Update 2022)* Usually, the file `/usr/share/X11/xkb/symbols/us` should already contain the section `xkb_symbols "de_se_fi"` which adds the "Umlauts". If it is not there, you can add it manually at the end of the file but be aware, it can get overwritten by `dnf` updates.
 
 ```
 partial alphanumeric_keys
