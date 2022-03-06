@@ -1,5 +1,5 @@
 ---
-title: "The \"painful\" switch from a German to an English keyboard layout on Linux (Fedora)"
+title: "The \"painful\" switch from a German to an English keyboard layout on Linux (Fedora) - Update 2022"
 date: "2019-07-10"
 slug: switch-keyboard-german-to-english-linux-fedora
 tags: [linux, german, fedora, coding]
