@@ -13,38 +13,41 @@ So why the hell should you change your keyboard from a German layout to an Engli
 
 I heard a lot about other developers who love the English layout so I always wanted to switch to it. Unfortunately, every time I said "now I switch", there was an emergency or a project under time pressure and I switched back due to time constraints to finish the work as quickly as possible. Motivated by an awesome blog post by my colleague [Matthias Endler](https://twitter.com/matthiasendler) https://matthias-endler.de/2018/keyboard/ who loves to optimize things and the opportunity of having less pressure during my sabbatical, I did the switch.
 
-# How to switch from a German to the US keyboard layout using Fedora
+# How to switch from a German to the US keyboard layout using Fedora (2022 updated)
 
-I use Fedora and i3 on a Lenovo notebook, so I had to find a good solution for using the US layout while having quick access to all German "Umlauts". It wasn't that easy to find a good solution but based on https://blog.florianheinle.de/englische-tastatur-umlaute I came up with the following solution that works for me:
-I added the following part to `/usr/share/X11/xkb/symbols/us` (it gets overwritten by `dnf` updates from time to time, so be aware of that or automate it, for me it was just easier so far to patch the file again when my custom layout gets overwritten)
+I use Fedora and i3 on a Lenovo notebook, so I had to find a good solution for using the US layout while having quick access to all German "Umlauts". It wasn't that easy to find a good solution but based on https://blog.florianheinle.de/englische-tastatur-umlaute I came up with the following solution that works for me.
+
+*(Update 2022 thanks to [Andy](twitter.com/andygrunwald) for the hint)* Usually, the file `/usr/share/X11/xkb/symbols/us` should already contain the section `xkb_symbols "de_se_fi"` which adds the "Umlauts". If it is not there, you can add it manually at the end of the file but be aware, it can get overwritten by `dnf` updates.
 
 ```
 partial alphanumeric_keys
-xkb_symbols "wolfi" {
-
-include "us(basic)"
-name[Group1]= "English (US, german umlauts on u o a s, euro on e, cent on c)";
-
-key <AD03> { [   e, E, EuroSign, EuroSign ] };
-key <AD07> { [   u, U, udiaeresis, Udiaeresis ] };
-key <AD09> { [   o, O, odiaeresis, Odiaeresis ] };
-key <AC01> { [   a, A,  adiaeresis, Adiaeresis   ] };
-key <AC02> { [   s, S, ssharp, U1E9E   ] };
-key <AB03> { [   c, C, cent] };
-
-include "level3(ralt_switch)"
-
+xkb_symbols "de_se_fi"  { 
+ 
+    include "us(basic)"
+    include "eurosign(e)"
+    name[Group1] = "German, Swedish and Finnish (US)"; 
+ 
+    key <AC01> {[ a,            A,          adiaeresis, Adiaeresis ]};
+    key <AC02> {[ s,            S,          ssharp,     U1E9E      ]};
+    key <AD01> {[ q,            Q,          at                     ]};
+    key <AD07> {[ u,            U,          udiaeresis, Udiaeresis ]};
+    key <AD09> {[ o,            O,          odiaeresis, Odiaeresis ]};
+    key <AD10> {[ p,            P,          aring,      Aring      ]};
+    key <AD12> {[ bracketright, braceright, asciitilde             ]}; 
+ 
+    include "level3(ralt_switch)"
 };
+
 ```
 
-You can activate the custom layout with `setxkbmap us wolfi` which results in an US layout having the Umlauts accessible via the right `Alt` key. I prefer that over the imho very cumbersome "dead keys" layout. To use this layout permanently you can create the file `/etc/X11/xorg.conf.d/00-keyboard.conf` with the content:
+You can activate the custom layout with `setxkbmap us de_se_fi` which results in an US layout having the Umlauts accessible via the right `Alt` key. I prefer that over the imho very cumbersome "dead keys" layout. To use this layout permanently you can create the file `/etc/X11/xorg.conf.d/00-keyboard.conf` with the content:
 
 ```
 Section "InputClass"
 Identifier "system-keyboard"
 MatchIsKeyboard "on"
 Option "XkbLayout" "us,at"
-Option "XkbVariant" "wolfi,nodeadkeys"
+Option "XkbVariant" "de_se_fi,nodeadkeys"
 EndSection
 ```
 
