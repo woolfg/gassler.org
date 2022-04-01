@@ -18,6 +18,6 @@ layout: "about"
 
 ## About me
 
-Since the late 90s, when I created my first web platforms using Perl and PHP 3, I have seen many technologies coming and going. This experience working in tech projects for more than 25 years in various industries and my computer science Ph.D. in the field of databases and recommender systems gives a good foundation to look into details from different perspectives. Besides the hands-on work in industry and academia, I led multiple projects and bigger cross-functional teams (>25 team members) and have been focussing especially on the culture in (tech) teams.
+Since the late 90s, when I created my first web platforms using Perl and PHP 3, I have seen many technologies coming and going. This experience working in tech projects for more than 25 years in various industries and my computer science Ph.D. in the field of databases and recommender systems gives a good foundation to look into details from different perspectives. Besides the hands-on work in industry and academia, I led multiple projects and bigger cross-functional teams (25+ team members) and have been focussing especially on the culture in (tech) teams.
 
 [more details about Wolfgang...](/about)
