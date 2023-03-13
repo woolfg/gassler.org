@@ -4,17 +4,13 @@ date: "2023-03-12"
 slug: docker-swarm-incident-pin-your-versions
 tags: [stackoverflowish,docker,ansible]
 hero: "bradyn-trollip-pxVOztBa6mY-unsplash.jpg"
-summary: "This is a tale of adding one iptables rule to ansible, a sleepless night, and a lot of resulting cascading failures.
-It is quite unusual to write a post mortem for an incident on a hobby cluster, but maybe it helps someone to avoid
-the same mistakes. I also added all log and error messages in case you encounter similar issues."
+summary: "This is a story about the struggles of adding a single iptables rule to ansible, which led to a night of insomnia and a series of incorrect assumptions about the root cause. While it's uncommon to create a post mortem for a hobby cluster, I hope that sharing my experience will help others avoid making similar mistakes. I've also included all log and error messages in case you encounter similar issues."
 credits: ["Hero picture by [@bradyn](https://unsplash.com/@bradyn)"]
 ---
 
 ## Post mortem
 
-This is a tale of adding one iptables rule to ansible, a sleepless night, and a lot of resulting cascading failures.
-It is quite unusual to write a post mortem for an incident on a hobby cluster, but maybe it helps someone to avoid
-the same mistakes. I also added all log and error messages in case you encounter similar issues.
+This is a story about the struggles of adding a single iptables rule to ansible, which led to a night of insomnia and a series of incorrect assumptions about the root cause. While it's uncommon to create a post mortem for a hobby cluster, I hope that sharing my experience will help others avoid making similar mistakes. I've also included all log and error messages in case you encounter similar issues.
 
 *Spoiler: The main issue
 was an upgrade of docker to version 23.0.1 on Debian 10 buster that was done automatically by my
