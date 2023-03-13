@@ -1,17 +1,19 @@
 ---
 title: "How I brought down my whole Docker Swarm cluster"
 date: "2023-03-12"
-slug: overwrite-iptables-rules-docker-swarm
+slug: docker-swarm-incident-pin-your-versions
 tags: [stackoverflowish,docker,ansible]
 hero: "bradyn-trollip-pxVOztBa6mY-unsplash.jpg"
-summary: ""
+summary: "This is a tale of adding one iptables rule to ansible, a sleepless night, and a lot of resulting cascading failures.
+It is quite unusual to write a post mortem for an incident on a hobby cluster, but maybe it helps someone to avoid
+the same mistakes. I also added all log and error messages in case you encounter similar issues."
 credits: ["Hero picture by [@bradyn](https://unsplash.com/@bradyn)"]
 ---
 
 ## Post mortem
 
 This is a tale of adding one iptables rule to ansible, a sleepless night, and a lot of resulting cascading failures.
-It is quite unusal to write a post mortem for an incident on hobby cluster, but maybe it helps someone to avoid
+It is quite unusual to write a post mortem for an incident on a hobby cluster, but maybe it helps someone to avoid
 the same mistakes. I also added all log and error messages in case you encounter similar issues.
 
 *Spoiler: The main issue
