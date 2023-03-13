@@ -43,9 +43,10 @@ wasn't a single running container on any of my worker nodes anymore.
 ### Idea 1: iptables
 
 The log messages were related to some links and network stuff, so I was quite sure that my iptables were fucked up.
+The log was full of such messages as docker tried to bring up needed containers in an endless loop:
 
 ```(bash)
-The log was full of such messages as docker tried to bring up needed containers in a somedomainMar 12 02:50:52 worker2.somedomain systemd-udevd[31592]: link_config: could not get ethtool features for vx-00
+Mar 12 02:50:52 worker2.somedomain systemd-udevd[31592]: link_config: could not get ethtool features for vx-00
 Mar 12 02:50:52 worker2.somedomain systemd-udevd[31592]: Could not set offload features of vx-001010-osg3l: No
 Mar 12 02:50:52 worker2.somedomain systemd-udevd[31592]: Could not generate persistent MAC address for vx-0010
 Mar 12 02:50:52 worker2.somedomain dockerd[741]: time="2023-03-12T02:50:52.747416271+01:00" level=error msg="N
