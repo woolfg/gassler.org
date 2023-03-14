@@ -1,16 +1,16 @@
 ---
-title: "How I brought down my whole Docker Swarm cluster"
+title: "How I brought down my whole Docker cluster"
 date: "2023-03-12"
 slug: docker-swarm-incident-pin-your-versions
 tags: [stackoverflowish,docker,ansible]
 hero: "bradyn-trollip-pxVOztBa6mY-unsplash.jpg"
-summary: "This is a story about the struggles of adding a single iptables rule to ansible, which led to a night of insomnia and a series of incorrect assumptions about the root cause. While it's uncommon to create a post mortem for a hobby cluster, I hope that sharing my experience will help others avoid making similar mistakes. I've also included all log and error messages in case you encounter similar issues."
+summary: "This is a story about the struggles of adding a single iptables rule to ansible, which led to a night of insomnia and a series of incorrect assumptions about the root cause. While it's uncommon to create a post mortem for a side-project cluster, I hope that sharing my experience will help others avoid making similar mistakes. I've also included all log and error messages in case you encounter similar issues."
 credits: ["Hero picture by [@bradyn](https://unsplash.com/@bradyn)"]
 ---
 
 ## Post mortem
 
-This is a story about the struggles of adding a single iptables rule to ansible, which led to a night of insomnia and a series of incorrect assumptions about the root cause. While it's uncommon to create a post mortem for a hobby cluster, I hope that sharing my experience will help others avoid making similar mistakes. I've also included all log and error messages in case you encounter similar issues.
+This is a story about the struggles of adding a single iptables rule to ansible, which led to a night of insomnia and a series of incorrect assumptions about the root cause. While it's uncommon to create a post mortem for a side-project cluster, I hope that sharing my experience will help others avoid making similar mistakes. I've also included all log and error messages in case you encounter similar issues.
 
 *Spoiler: The main issue
 was an upgrade of docker to version 23.0.1 on Debian 10 buster that was done automatically by my
@@ -42,27 +42,27 @@ The log messages were related to some links and network stuff, so I was quite su
 The log was full of such messages as docker tried to bring up needed containers in an endless loop:
 
 ```(bash)
-Mar 12 02:50:52 worker2.somedomain systemd-udevd[31592]: link_config: could not get ethtool features for vx-00
-Mar 12 02:50:52 worker2.somedomain systemd-udevd[31592]: Could not set offload features of vx-001010-osg3l: No
-Mar 12 02:50:52 worker2.somedomain systemd-udevd[31592]: Could not generate persistent MAC address for vx-0010
-Mar 12 02:50:52 worker2.somedomain dockerd[741]: time="2023-03-12T02:50:52.747416271+01:00" level=error msg="N
-Mar 12 02:50:52 worker2.somedomain dockerd[741]: time="2023-03-12T02:50:52.750171275+01:00" level=error msg="p
-Mar 12 02:50:52 worker2.somedomain dockerd[741]: time="2023-03-12T02:50:52.750997547+01:00" level=error msg="f
-Mar 12 02:50:52 worker2.somedomain systemd-udevd[31592]: Process '/sbin/ip link set  down' failed with exit co
-Mar 12 02:50:52 worker2.somedomain systemd-udevd[31567]: link_config: autonegotiation is unset or enabled, the
-Mar 12 02:50:52 worker2.somedomain systemd-udevd[31567]: Could not generate persistent MAC address for vethb3e
-Mar 12 02:50:52 worker2.somedomain systemd-udevd[31592]: link_config: autonegotiation is unset or enabled, the
-Mar 12 02:50:52 worker2.somedomain systemd-udevd[31592]: Could not generate persistent MAC address for veth608
-Mar 12 02:50:52 worker2.somedomain kernel: veth0: renamed from vethb3e3b63
-Mar 12 02:50:52 worker2.somedomain kernel: br0: port 2(veth0) entered blocking state
-Mar 12 02:50:52 worker2.somedomain kernel: br0: port 2(veth0) entered disabled state
-Mar 12 02:50:52 worker2.somedomain kernel: device veth0 entered promiscuous mode
-Mar 12 02:50:52 worker2.somedomain kernel: br0: port 2(veth0) entered blocking state
-Mar 12 02:50:52 worker2.somedomain kernel: br0: port 2(veth0) entered forwarding state
-Mar 12 02:50:52 worker2.somedomain systemd-udevd[31592]: Process '/sbin/ip link set  down' failed with exit co
-Mar 12 02:50:53 worker2.somedomain dockerd[741]: time="2023-03-12T02:50:53.042439971+01:00" level=warning msg=
-Mar 12 02:50:53 worker2.somedomain kernel: eth0: renamed from veth6084f8a
-Mar 12 02:50:53 worker2.somedomain systemd-udevd[31592]: Process '/sbin/ip link set  down' failed somedomain
+Mar 12 02:50:52 worker2...inlupus.at systemd-udevd[31592]: link_config: could not get ethtool features for vx-00
+Mar 12 02:50:52 worker2...inlupus.at systemd-udevd[31592]: Could not set offload features of vx-001010-osg3l: No
+Mar 12 02:50:52 worker2...inlupus.at systemd-udevd[31592]: Could not generate persistent MAC address for vx-0010
+Mar 12 02:50:52 worker2...inlupus.at dockerd[741]: time="2023-03-12T02:50:52.747416271+01:00" level=error msg="N
+Mar 12 02:50:52 worker2...inlupus.at dockerd[741]: time="2023-03-12T02:50:52.750171275+01:00" level=error msg="p
+Mar 12 02:50:52 worker2...inlupus.at dockerd[741]: time="2023-03-12T02:50:52.750997547+01:00" level=error msg="f
+Mar 12 02:50:52 worker2...inlupus.at systemd-udevd[31592]: Process '/sbin/ip link set  down' failed with exit co
+Mar 12 02:50:52 worker2...inlupus.at systemd-udevd[31567]: link_config: autonegotiation is unset or enabled, the
+Mar 12 02:50:52 worker2...inlupus.at systemd-udevd[31567]: Could not generate persistent MAC address for vethb3e
+Mar 12 02:50:52 worker2...inlupus.at systemd-udevd[31592]: link_config: autonegotiation is unset or enabled, the
+Mar 12 02:50:52 worker2...inlupus.at systemd-udevd[31592]: Could not generate persistent MAC address for veth608
+Mar 12 02:50:52 worker2...inlupus.at kernel: veth0: renamed from vethb3e3b63
+Mar 12 02:50:52 worker2...inlupus.at kernel: br0: port 2(veth0) entered blocking state
+Mar 12 02:50:52 worker2...inlupus.at kernel: br0: port 2(veth0) entered disabled state
+Mar 12 02:50:52 worker2...inlupus.at kernel: device veth0 entered promiscuous mode
+Mar 12 02:50:52 worker2...inlupus.at kernel: br0: port 2(veth0) entered blocking state
+Mar 12 02:50:52 worker2...inlupus.at kernel: br0: port 2(veth0) entered forwarding state
+Mar 12 02:50:52 worker2...inlupus.at systemd-udevd[31592]: Process '/sbin/ip link set  down' failed with exit co
+Mar 12 02:50:53 worker2...inlupus.at dockerd[741]: time="2023-03-12T02:50:53.042439971+01:00" level=warning msg=
+Mar 12 02:50:53 worker2...inlupus.at kernel: eth0: renamed from veth6084f8a
+Mar 12 02:50:53 worker2...inlupus.at systemd-udevd[31592]: Process '/sbin/ip link set  down' failed somedomain
 ```
 
 I checked all iptables, flushed rules, restarted docker, but nothing helped. I could access all nodes and the network worked.
@@ -110,8 +110,13 @@ Our ansible playbook has a section to install the docker package using apt.
 
 Then running the playbook, the `latest` flag triggered an upgrade of the docker version and the new version 23.0.1 was installed. This version requires the package `apparmor` which wasn't there. This was the inital reason why docker couldn't start any containers anymore.
 
-Using `latest` is a quite bad idea! We should have pinned all versions, especially in production environments.
-In this case just use `state: present` to not upgrade the package and everything is fine.
+## Pin your versions
+
+**Using `latest` is a quite bad idea! We should have pinned all versions, especially in production environments.
+In this case just use `state: present` to not upgrade the package and everything is fine.**
+
+For all German speaking people, we also recorded a podcast episode about version pinning and the dependency hell in general:
+[Engineering Kiosk: #27 Sicherheit in der Dependency Hölle](https://engineeringkiosk.dev/podcast/episode/27-sicherheit-in-der-dependency-h%C3%B6lle/?pkn=gasslerblog)
 
 ## Conclusion: What I have learned
 
@@ -123,3 +128,7 @@ from scratch to rule out any other problems.
 - Never ever use automated upgrades in production environments!
 - It is super difficult to find the root cause by googling, even if you have very specific error messages.
 - Another pair of eyes might have helped a lot, but it was middle of the night and it is "just" a cluster for side-projects.
+
+## Credits
+
+- Thanks to [Mischa Helfenstein](https://www.linkedin.com/in/mischa-helfenstein/) for reviewing drafts of this post.
