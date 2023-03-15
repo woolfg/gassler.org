@@ -28,12 +28,12 @@ is to tag the task in ansible which allows me to run only this one task on one w
 ### The ansible run
 
 After my single ansible task worked, I ran the whole playbook on one worker node. The playbook run failed as an important information
-was missing (some dynamic information about the socker swarm manager node). This data is gathered from the manager node and wasn't
+was missing (some dynamic information about the docker swarm manager node). This data is gathered from the manager node and wasn't
 fetched as the playbook was just executed on one worker. Therefore, I ran the playbook without any limitation on all nodes. The run was successful.
 
 ### Incident started
 
-In the meanwhile I got an alert, that a service is no longer reachable. I checked the container which was no longer running. Instead
+In the meanwhile I got an alert that a service is no longer reachable. I checked the container which was no longer running. Instead
 of running containers I found tons of log error messages. I immediately started to investigate the issue and saw that there
 wasn't a single running container on any of my worker nodes anymore.
 
@@ -97,7 +97,7 @@ the hello world container was finally running.
 
 Unfortunately, after restarting all my stacks manually, I still couldn't see any running containers
 and the log was full of error messages as shown above (link, network, etc). It took me a while until I found the problem.
-As I started the stacks manually and didn't use my automates solution, I forgot to add the flag `--with-registry-auth`.
+As I started the stacks manually and didn't use my automated solution, I forgot to add the flag `--with-registry-auth`.
 This flag is necessary to pull images from a private registry which I use.  Finally after adding `--with-registry-auth`,
 everything was recovering and I could go to bed.
 
@@ -142,8 +142,8 @@ from scratch to rule out any other problems.
 - Even if you just changed something, the problem might be related to something else. So, try to narrow down the problem by also checking unrelated things.
 - Pin your versions and do not allow any automated upgrades.
 - It is super difficult to find the root cause by googling, even if you have very specific error messages.
-- Another pair of eyes might have helped a lot, but it was middle of the night and it is "just" a cluster for side-projects.
+- Another pair of eyes might have helped a lot, but it was the middle of the night and it is "just" a cluster for side-projects.
 
 ## Credits
 
-- Thanks to [Andy Grunwald](https://twitter.com/andygrunwald/),[Mischa Helfenstein](https://www.linkedin.com/in/mischa-helfenstein/), and [Tim Hannemann](https://www.linkedin.com/in/timhannemann) for reviewing drafts of this post.
+- Thanks to [Andy Grunwald](https://twitter.com/andygrunwald/), [Mischa Helfenstein](https://www.linkedin.com/in/mischa-helfenstein/), and [Tim Hannemann](https://www.linkedin.com/in/timhannemann) for reviewing drafts of this post.
