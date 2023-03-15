@@ -2,6 +2,9 @@
 <div class = "article-content">
         <!-- Range over the pages and only include the ones that are a post type -->
         {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+        <!-- filter out all pages that have a param notOnHome set to true -->
+        {{ $pages = where $pages "Params.notOnHome" "!=" true }}
+
         {{ range (.Paginate $pages).Pages }}
         <article>
             <h2>
