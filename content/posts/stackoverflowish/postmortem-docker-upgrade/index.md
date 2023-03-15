@@ -20,15 +20,16 @@ ansible playbook.*
 
 I just wanted to persist a manually added iptables rule on my side-project docker swarm cluster by adding it to my ansible playbook.
 I had tested the iptables rule, added it to the playbook using the iptables plugin. My usual testing procedure
-is to tag the task and run just this one task on one worker node (you can use `ansible-playbook --limit ` to do this).
+is to tag the task in ansible which allows me to run only this one task on one worker node
+(you can use `ansible-playbook --limit servername --tags debug` to do this).
 
 ## The timeline
 
 ### The ansible run
 
-After my tests worked, I ran the whole playbook on one worker node. The playbook run failed as an important information
-was missing. This data is gathered from the manager node and wasn't fetched as the playbook was just executed on one worker.
-Therefore, I ran the playbook without any limitation on all nodes. The run was successful.
+After my single ansible task worked, I ran the whole playbook on one worker node. The playbook run failed as an important information
+was missing (some dynamic information about the socker swarm manager node). This data is gathered from the manager node and wasn't
+fetched as the playbook was just executed on one worker. Therefore, I ran the playbook without any limitation on all nodes. The run was successful.
 
 ### Incident started
 
@@ -88,13 +89,17 @@ Maybe it was because it was middle of the night, but I didn't restart the docker
 
 ### The solution
 
-Finally, I found a website that states that the new docker version 23.0.1 requires AppArmor. This finally pulled the trigger and I
-checked the docker version. I installed apparmor and restarted the docker daemon. After that, the hello world container was finally running.
+Finally, I found a [website that states](https://askubuntu.com/questions/1455714/why-does-docker-run-helloworld-on-a-fresh-ubuntu-20-04-fail-with-unable-to-appl) that the new docker version 23 requires AppArmor;
+In the [changelog of docker 23](https://docs.docker.com/engine/release-notes/23.0/#known-issues), it is mentioned as a known issue,
+that there are reported problems on Debian due to a missing `apparmor_parser`.
+This finally pulled the trigger and I checked the docker version. I installed apparmor and restarted the docker daemon. After that,
+the hello world container was finally running.
 
-Unfortunately, after restarting all my stacks manually, I still couldn't see any running containers and the log was full of error
-messages as shown above (link, network, etc). I took me a while until I found the problem. As I started the stacks manually I forgot
-to add the flag `--with-registry-auth`. This flag is necessary to pull images from a private registry.  Finally, everything was
-recovering and I could go to bed.
+Unfortunately, after restarting all my stacks manually, I still couldn't see any running containers
+and the log was full of error messages as shown above (link, network, etc). It took me a while until I found the problem.
+As I started the stacks manually and didn't use my automates solution, I forgot to add the flag `--with-registry-auth`.
+This flag is necessary to pull images from a private registry which I use.  Finally after adding `--with-registry-auth`,
+everything was recovering and I could go to bed.
 
 ## The root cause
 
@@ -108,12 +113,22 @@ Our ansible playbook has a section to install the docker package using apt.
     state: latest
 ```
 
-Then running the playbook, the `latest` flag triggered an upgrade of the docker version and the new version 23.0.1 was installed. This version requires the package `apparmor` which wasn't there. This was the inital reason why docker couldn't start any containers anymore.
+Then running the playbook, the `latest` flag triggered an upgrade of the docker version and the new version 23.0.1 was installed. This version requires the package `apparmor` which wasn't there. This was the initial reason why docker couldn't start any containers anymore.
 
 ## Pin your versions
 
 **Using `latest` is a quite bad idea! We should have pinned all versions, especially in production environments.
 In this case just use `state: present` to not upgrade the package and everything is fine.**
+
+If you also want to make sure that all nodes (especially newly added ones) run the same version, you can add the version number as well:
+
+```(yaml)
+- name: install latest docker
+  become: true
+  apt:
+    name: ["docker-ce=5:23.0.1-1~debian.10~buster"]
+    state: present
+```
 
 For all German speaking people, we also recorded a podcast episode about version pinning and the dependency hell in general:
 [Engineering Kiosk: #27 Sicherheit in der Dependency Hölle](https://engineeringkiosk.dev/podcast/episode/27-sicherheit-in-der-dependency-h%C3%B6lle/?pkn=gasslerblog)
@@ -125,10 +140,10 @@ from scratch to rule out any other problems.
 - When docker shows network related error messages, it might be just the case that it can't pull the image from a private registry or in general, starts a container. It might not be related to the network at all.
 - Avoid manual changes or commands, as e.g. starting stacks and forgetting the necessary flag `--with-registry-auth`.
 - Even if you just changed something, the problem might be related to something else. So, try to narrow down the problem by also checking unrelated things.
-- Never ever use automated upgrades in production environments!
+- Pin your versions and do not allow any automated upgrades.
 - It is super difficult to find the root cause by googling, even if you have very specific error messages.
 - Another pair of eyes might have helped a lot, but it was middle of the night and it is "just" a cluster for side-projects.
 
 ## Credits
 
-- Thanks to [Mischa Helfenstein](https://www.linkedin.com/in/mischa-helfenstein/) for reviewing drafts of this post.
+- Thanks to [Andy Grunwald](https://twitter.com/andygrunwald/),[Mischa Helfenstein](https://www.linkedin.com/in/mischa-helfenstein/), and [Tim Hannemann](https://www.linkedin.com/in/timhannemann) for reviewing drafts of this post.
