@@ -34,7 +34,6 @@ layout: "about"
 ### my education
 * Ph.D. in Computer Science/Recommender Systems at [University of Innsbruck, Austria](https://informatik.uibk.ac.at)
 
-{{< subscribe >}}
 ### Imprint / Editorial Responsibility
 Wolfgang Gassler  
 info@gassler.org

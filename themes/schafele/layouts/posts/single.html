@@ -6,37 +6,40 @@
     {{ partial "shorttagdescription.html" . }}
     <div>
         <p>
-        {{ if .Params.hero }}
+            {{ if .Params.hero }}
             {{ $srcset := "360|(max-width: 360px) 360px,700|(min-width: 700px) 700px" }}
             {{ $srcset := split $srcset "," }}
-            {{ $original := (.Page.Resources.ByType "image").GetMatch (printf "*%s" (.Params.hero))  }}
+            {{ $original := (.Page.Resources.ByType "image").GetMatch (printf "*%s" (.Params.hero)) }}
             {{ if $original }}
             <!-- image -->
-            <figure class="hero">
-                <img src="{{ if ge $original.Width 1500 }}{{ ($original.Resize "1500x").RelPermalink  }}{{ else }}{{ $original.RelPermalink }}{{ end }}" srcset="{{range $i, $set := $srcset}}{{ $setparams := split $set "|" }}{{$sizecondition := index $setparams 0 }}{{ $image := $original.Resize (print $sizecondition "x") }}{{ if $i }}, {{ end }}{{ (print $image.RelPermalink " " $sizecondition "w") }}{{ end }}" sizes="{{range $i, $set := $srcset}}{{ $setparams := split $set "|" }}{{$mediacondition := index $setparams 1 }}{{ if $i }}, {{ end }}{{ $mediacondition }}{{ end }}"/>
-            </figure>
-            {{ end }}
+        <figure class="hero">
+            <img src="{{ if ge $original.Width 1500 }}{{ ($original.Resize " 1500x").RelPermalink }}{{ else }}{{
+                $original.RelPermalink }}{{ end }}" srcset="{{range $i, $set := $srcset}}{{ $setparams := split $set "
+                |" }}{{$sizecondition :=index $setparams 0 }}{{ $image :=$original.Resize (print $sizecondition "x" )
+                }}{{ if $i }}, {{ end }}{{ (print $image.RelPermalink " " $sizecondition "w" ) }}{{ end }}"
+                sizes="{{range $i, $set := $srcset}}{{ $setparams := split $set " |" }}{{$mediacondition :=index
+                $setparams 1 }}{{ if $i }}, {{ end }}{{ $mediacondition }}{{ end }}" />
+        </figure>
+        {{ end }}
         {{ end }}
         {{ .Content }}
         </p>
     </div>
-    {{ if or (not .Params.tags) (not (in .Params.tags "stackoverflowish")) }}
-    {{ partial "subscribe.html" . }}
-    {{ end }}
+
     <div class="page-footer">
         {{ if and .Params.tags (in .Params.tags "stackoverflowish") }}
         <hr class="footer-divider">
         {{ end }}
         {{ if .Params.credits }}
-        <p class="credits">Credits: {{ range .Params.credits }}{{ .  | markdownify }}{{ end }}</p> 
+        <p class="credits">Credits: {{ range .Params.credits }}{{ . | markdownify }}{{ end }}</p>
         {{ end }}
         {{if .Params.tags}}
-        <div class="footertags">Tags: 
-        {{ range .Params.tags }}
+        <div class="footertags">Tags:
+            {{ range .Params.tags }}
             <a class="tag" href="/tags/{{ . | urlize }}">#{{ . }}</a>
-        {{ end }}
+            {{ end }}
         </div>
-      {{ end }}
+        {{ end }}
     </div>
 </article>
 {{end}}
