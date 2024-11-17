@@ -20,7 +20,6 @@ summaryLength = 10 # Configure how long the post summary should be on the homepa
 
 	description = "Website Description"
 
-    twitter = "https://twitter.com/schafele"
 	linkedin = "https://www.linkedin.com/in/wolfganggassler/"
     github = "https://github.com/woolfg"
     constructeev = "https://www.constructeev.com/gassler-blog"
