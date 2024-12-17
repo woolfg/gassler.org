@@ -21,8 +21,10 @@ layout: "about"
 * [Freelancing & Consulting](/consulting) since the late 90s at [inlupus, Austria & Remote](https://inlupus.at)
 * Engineering Manager at [trivago, Germany](https://company.trivago.com) until 2019
 * Lecturer & Researcher at [research group databases and information systems, University of Innsbruck, Austria](https://dbis-informatik.uibk.ac.at) until 2015
+
 ### (Side) Projects
 * [Engineering Kiosk](https://engineeringkiosk.dev) The German tech podcast about engineering culture, open source, people, and tech (with [Andy Grunwald](https://andygrunwald.com/))
+* [Open Podcast Analytics](https://openpodcast.dev) Open Podcast is an open-source analytics platform empowering podcasters with full data ownership, including importers for Spotify and Apple. (with [Matthias Endler](https://endler.dev)
 * [codeprints.dev](https://codeprints.dev) converts your git history into personalized art (with [Matthias Endler](https://endler.dev), acquired by [dyve](https://dyve.agency))
 * [F-Online.at](https://f-online.at) biggest (30% market share) e-learning platform for the Austrian driving license exam
 * [Book about MySQL](https://www.rheinwerk-verlag.de/mysql-das-umfassende-handbuch/), 3rd edition, published by Rheinwerk, biggest German IT publisher (with [Eva Zangerle](https://evazangerle.at/) and [Stefan Pröll](https://www.stefanproell.at/))
