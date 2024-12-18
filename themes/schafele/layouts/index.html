@@ -12,7 +12,13 @@
                     {{ .Title }}
                 </a>
             </h2>
-            <div><p>{{if .Params.longsummary }}{{ .Params.longsummary }}{{ else }}{{ .Summary }}{{ end }}<a href="{{ .Permalink }}" class="more">more...</a></p></div>
+            <div><p>{{if .Params.longsummary }}{{ .Params.longsummary }}{{ else }}{{ .Summary }}{{ end }}
+            {{ if .Params.podcastlink }}
+              <a href="{{ .Params.podcastlink }}" class="more">more...</a>
+            {{ else }}
+              <a href="{{ .Permalink }}" class="more">more...</a>
+            {{ end }}
+            </p></div>
             <div class="post-footer"> 
             {{if ne .Section "section"}}<time class="sep-after">{{ .Date.Format "January 2, 2006" }}</time> {{ end }}
             {{ partial "minread.html" . }}

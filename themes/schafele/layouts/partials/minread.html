@@ -1,1 +1,19 @@
-<span class="reading-time">{{ math.Round (div (countwords .Content) 220.0) }} min read</span>
+{{ if .Params.podcastlength }}
+  {{ $timeParts := split .Params.podcastlength ":" }}
+  {{ $hours := index $timeParts 0 | int }}
+  {{ $minutes := index $timeParts 1 | int }}
+  {{ $seconds := index $timeParts 2 | int }}
+  {{ $prettyTime := "" }}
+  {{ if gt $hours 0 }}
+    {{ $prettyTime = printf "%d hr " $hours }}
+  {{ end }}
+  {{ if gt $minutes 0 }}
+    {{ $prettyTime = printf "%s%d min " $prettyTime $minutes }}
+  {{ end }}
+  {{ if gt $seconds 0 }}
+    {{ $prettyTime = printf "%s%d sec" $prettyTime $seconds }}
+  {{ end }}
+  <span class="reading-time">Podcast length {{ trim $prettyTime " " }}</span>
+{{ else }}
+  <span class="reading-time">{{ math.Round (div (countwords .Content) 220.0) }} min read</span>
+{{ end }}
