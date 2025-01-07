@@ -1,5 +1,5 @@
 ---
-title: "Servant Leadership (Guest in Agiler Senf Podcast)"
+title: "Servant Leadership (Guest on Agiler Senf Podcast)"
 date: "2024-07-08"
 slug: servant-leadership-in-der-praxis
 tags: [leadership,podcast]
