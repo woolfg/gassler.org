@@ -20,6 +20,4 @@ Throughout the episode, we shared our experiences in building the product as a s
 
 Andreas Lehr, the host of "Happy Bootstrapping," interviews founders and entrepreneurs about their journeys in building and scaling their businesses every week.
 
-Don't miss this episode packed with valuable insights and practical advice for anyone interested in the intersection of open source, SaaS, and podcasting.
-
 Listen to the episode [here](https://happy-bootstrapping.podigee.io/101-mit-open-source-und-saas-zur-podcast-analytics-plattform-101).
