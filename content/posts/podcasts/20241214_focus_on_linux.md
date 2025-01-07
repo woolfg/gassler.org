@@ -10,6 +10,4 @@ podcastlink: "https://focusonlinux.podigee.io/133-lessons-learned-aus-open-sourc
 
 Open Source contributions go beyond consumption—they're about giving back, growing professionally, and unlocking career opportunities. I joined the Focus on Linux podcast to discuss how to get started, best practices, and why even small projects can create a huge impact. Podcast is in German.
 
-Listen to the episode [here](https://focusonlinux.podigee.io/133-lessons-learned-aus-open-source-contributions). 
-```
-
+Listen to the episode [here](https://focusonlinux.podigee.io/133-lessons-learned-aus-open-source-contributions).
