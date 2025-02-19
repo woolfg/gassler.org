@@ -6,6 +6,15 @@ layout: "about"
 
 {{< figure src="wolfgang.jpg" >}}
 
+Hi, I am Wolfgang and I am a tech consultant and podcast co-host with a passion for open source and working with people. My mission is to help teams and organizations unlock their potential by optimizing technology, fostering collaborative cultures, and building scalable systems. I thrive on creating environments where both individuals and products can excel.
+
+With experience leading cross-functional teams of 25+ members and collaborating on innovative projects, I bring a hands-on approach to solving complex challenges. As the co-host of Engineering Kiosk, I explore engineering culture, open source, and emerging tech trends. I’ve also contributed to open-source projects like Open Podcast Analytics, empowering podcasters with full data ownership, and co-created codeprints.dev, which transforms git histories into personalized art.
+
+My tech journey began in the late 90s, building web platforms with Perl and PHP 3. Since then, I’ve worked across various industries, earned a Ph.D. in Computer Science from the University of Innsbruck (specializing in databases and recommender systems), and co-authored a MySQL book published by Rheinwerk, Germany’s leading IT publisher.
+
+At the core of my work is a passion for technology, people, and continuous learning. Whether developing scalable databases, improving team dynamics, or advancing product development, I’m driven by curiosity and a commitment to empowering individuals and organizations alike.
+
+If you’re interested in collaborating, check out my [consulting](/consulting) page—or feel free to [contact](mailto:info@gassler.org) me for any other inquiries.
 
 {{< social >}}
 

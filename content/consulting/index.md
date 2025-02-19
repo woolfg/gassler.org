@@ -14,10 +14,16 @@ layout: "about"
 - a coach with a strong tech background
 - or an open-minded person to bounce ideas on an interesting tech-related challenge
 
-... end an [email](mailto:info@gassler.org).
+... send an [email](mailto:info@gassler.org).
 
 ## About me
 
-Since the late 90s, when I created my first web platforms using Perl and PHP 3, I have seen many technologies coming and going. This experience working in tech projects for more than 25 years in various industries and my computer science Ph.D. in the field of databases and recommender systems provide a solid  foundation to look into details from different perspectives. Besides the hands-on work in industry and academia, I wrote a book about the database MySQL, led multiple projects and bigger cross-functional teams (25+ team members), and have been focussing especially on the culture in (tech) teams.
+With over 25 years of industry experience, including leadership roles and consulting engagements, I have cultivated strong leadership skills and gained valuable hands-on experience in both industry and academia. My expertise spans not only the breadth of technical and team leadership but is also deeply informed by a product mindset, particularly in climate-tech, sustainability, and process automation.
+
+I have a proven track record of successfully leading and coaching diverse and cross-functional teams and navigating complex projects. My approach is centered around creating a positive and collaborative team culture that fosters innovation and delivers exceptional results.
+
+Whether you need tech-guidance, architecture reviews, scalable solutions, improved structures for your data-driven tech teams, or assistance in cultivating a tech culture that promotes innovation, I can help.
+
+Feel free to reach out to me via [email](mailto:info@gassler.org) to schedule an initial conversation where we can identify actionable steps to enhance your tech team's performance and innovation. Together, we'll explore tailored solutions for your organization's unique tech challenges and goals.
 
 [more details about Wolfgang...](/about)
