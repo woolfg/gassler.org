@@ -4,7 +4,7 @@ title: "about wolfgang gassler"
 layout: "about"
 ---
 
-{{< figure src="wolfgang.jpg" >}}
+{{<figure class="aboutpic" src="wolfgang.jpg" alt="Wolfgang Gassler">}}
 
 Hi, I am Wolfgang and I am a tech consultant and podcast co-host with a passion for open source and working with people. My mission is to help teams and organizations unlock their potential by optimizing technology, fostering collaborative cultures, and building scalable systems. I thrive on creating environments where both individuals and products can excel.
 

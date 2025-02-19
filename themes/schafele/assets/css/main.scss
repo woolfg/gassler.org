@@ -377,3 +377,22 @@ article.post {
   margin-left: 1rem;
   margin-bottom: 1rem;
 }
+
+figure.aboutpic {
+  float: right;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  width: 50%;
+}
+
+@media (max-width: 600px) {
+  figure.aboutpic {
+    float: none;
+    text-align: center;
+    width: 100%;
+    margin-left: 0;
+  }
+  .post-title {
+    text-align: center;
+  }
+}

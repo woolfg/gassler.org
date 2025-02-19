@@ -4,6 +4,8 @@ title: "consulting"
 layout: "about"
 ---
 
+
+
 ## You are looking for...
 
 - a review of your architecture
@@ -14,9 +16,12 @@ layout: "about"
 - a coach with a strong tech background
 - or an open-minded person to bounce ideas on an interesting tech-related challenge
 
-... send an [email](mailto:info@gassler.org).
+... feel free to reach out to me via [email](mailto:info@gassler.org).
+
 
 ## About me
+
+{{<figure class="aboutpic" src="wolfgang.jpg" alt="Wolfgang Gassler">}}
 
 With over 25 years of industry experience, including leadership roles and consulting engagements, I have cultivated strong leadership skills and gained valuable hands-on experience in both industry and academia. My expertise spans not only the breadth of technical and team leadership but is also deeply informed by a product mindset, particularly in climate-tech, sustainability, and process automation.
 
