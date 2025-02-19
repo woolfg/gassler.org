@@ -14,7 +14,7 @@ layout: "about"
 - a coach with a strong tech background
 - or an open-minded person to bounce ideas on an interesting tech-related challenge
 
-... drop me a message on [Twitter](https://twitter.com/schafele) or send an [email](mailto:info@gassler.org).
+... end an [email](mailto:info@gassler.org).
 
 ## About me
 
