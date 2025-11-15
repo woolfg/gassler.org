@@ -1,10 +1,10 @@
 ---
 title: "30 Years of MySQL (Guest on Urlaub im Userspace Podcast)"
-date: "2024-11-12"
+date: "2025-11-12"
 slug: 30-years-of-mysql
-tags: [podcast, database]
+tags: [podcast, databases]
 summary: "I joined the Urlaub im Userspace podcast to celebrate 30 years of MySQL and to talk about why it's still one of the most relevant databases today. We didn't just look back at the 90s and our first MySQL projects, but also dove deep into what makes MySQL powerful today: ACID, transactions, foreign keys, clustering, scaling challenges, and how companies like Facebook scale massive MySQL setups. Podcast is in German."
-podcastlength: "TBD"
+podcastlength: "01:54:00"
 podcastlink: "https://user.space/e011-30-jahre-mysql/"
 ---
 
